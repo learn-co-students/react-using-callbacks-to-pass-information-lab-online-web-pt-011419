@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import getColor from './Matrix'
 
 export default class Cell extends Component {
   
@@ -10,7 +11,8 @@ export default class Cell extends Component {
   }
   
   handleClick = () => {
-    const nextColor = this.props.getColor()
+    // Why no work
+    const nextColor = getColor()
     this.setState({color: nextColor})
   }
 
